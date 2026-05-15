@@ -889,6 +889,14 @@
       <div class="nearby-dist">~300m</div>
     </div>
     <div class="nearby-item">
+      <span class="nearby-emoji">🏋️</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Level Garden</div>
+        <div class="nearby-cat">Esportes · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~400m</div>
+    </div>
+    <div class="nearby-item">
       <span class="nearby-emoji">🛍️</span>
       <div class="nearby-info">
         <div class="nearby-name">Shopping Garten</div>
@@ -927,6 +935,30 @@
         <div class="nearby-cat">Mercado · Bom Retiro</div>
       </div>
       <div class="nearby-dist">~1,2km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🛒</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Supermercados Komprão - Atacado</div>
+        <div class="nearby-cat">Mercado · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~1,4km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">⛪</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Igreja Católica - Nossa Senhora Aparecida</div>
+        <div class="nearby-cat">Igreja · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~1,0km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">⛪</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Igreja Luterana - São Mateus</div>
+        <div class="nearby-cat">Igreja · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~2,2km</div>
     </div>
     <div class="nearby-item">
       <span class="nearby-emoji">🛍️</span>
@@ -1025,8 +1057,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function makeEmojiIcon(emoji, color) {
   return L.divIcon({
     className: '',
-    html: `<div style="width:32px;height:32px;border-radius:50%;background:white;border:2.5px solid ${color};box-shadow:0 2px 6px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;font-size:15px;line-height:1">${emoji}</div>`,
-    iconSize: [32, 32],
+    html: `<div style="width:40px;height:40px;border-radius:50%;background:white;border:2.5px solid ${color};box-shadow:0 2px 6px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;font-size:15px;line-height:1">${emoji}</div>`,
+    iconSize: [40, 40],
     iconAnchor: [16, 16]
   });
 }
@@ -1035,19 +1067,23 @@ L.marker([-26.2540, -48.8479], {icon: makeEmojiIcon('🏠', '#0d4a35')})
   .addTo(map).bindPopup('<b>Bom Retiro Park</b><br>R. Pio XII, 87');
 
 const points = [
-  { lat: -26.2546, lng: -48.8500, label: 'Supermercado Albino',          emoji: '🛒', color: '#10b981' },
-  { lat: -26.2552, lng: -48.8495, label: 'Farmácia Preço Popular',       emoji: '💊', color: '#ef4444' },
-  { lat: -26.2655, lng: -48.8446, label: 'Drogaria Coradelli',           emoji: '💊', color: '#ef4444' },
-  { lat: -26.2641, lng: -48.8452, label: 'Supermercados Kunz',           emoji: '🛒', color: '#10b981' },
-  { lat: -26.2517, lng: -48.8527, label: 'Univille',                     emoji: '🎓', color: '#3b82f6' },
-  { lat: -26.2529, lng: -48.8547, label: 'UDESC Joinville',              emoji: '🎓', color: '#3b82f6' },
-  { lat: -26.3036, lng: -48.8486, label: 'Shopping Mueller',             emoji: '🛍️', color: '#f59e0b' },
-  { lat: -26.2539, lng: -48.8532, label: 'Shopping Garten',              emoji: '🛍️', color: '#f59e0b' },
-  { lat: -26.2990, lng: -48.8485, label: 'Shopping Cidade das Flores',   emoji: '🛍️', color: '#f59e0b' },
-  { lat: -26.3043, lng: -48.8510, label: 'Católica SC',                  emoji: '🎓', color: '#3b82f6' },
-  { lat: -26.2349, lng: -48.8839, label: 'UFSC Joinville',               emoji: '🎓', color: '#3b82f6' },
-  { lat: -26.2827, lng: -48.8130, label: 'Hospital Regional Hans Dieter',emoji: '🏥', color: '#ec4899' },
-  { lat: -26.2254, lng: -48.8027, label: 'Aeroporto Joinville',          emoji: '✈️', color: '#8b5cf6' },
+  { lat: -26.2546, lng: -48.8500, label: 'Supermercado Albino',                       emoji: '🛒', color: '#10b981' },
+  { lat: -26.2666, lng: -48.8500, label: 'Supermercado Komprão',                      emoji: '🛒', color: '#10b981' },
+  { lat: -26.2552, lng: -48.8495, label: 'Farmácia Preço Popular',                    emoji: '💊', color: '#ef4444' },
+  { lat: -26.2527, lng: -48.8479, label: 'LEVEL Garden',                              emoji: '🏋️', color: '#ef4444' },
+  { lat: -26.2655, lng: -48.8446, label: 'Drogaria Coradelli',                        emoji: '💊', color: '#ef4444' },
+  { lat: -26.2641, lng: -48.8452, label: 'Supermercados Kunz',                        emoji: '🛒', color: '#10b981' },
+  { lat: -26.2517, lng: -48.8527, label: 'Univille',                                  emoji: '🎓', color: '#3b82f6' },
+  { lat: -26.2529, lng: -48.8547, label: 'UDESC Joinville',                           emoji: '🎓', color: '#3b82f6' },
+  { lat: -26.3036, lng: -48.8486, label: 'Shopping Mueller',                          emoji: '🛍️', color: '#f59e0b' },
+  { lat: -26.2539, lng: -48.8532, label: 'Shopping Garten',                           emoji: '🛍️', color: '#f59e0b' },
+  { lat: -26.2990, lng: -48.8485, label: 'Shopping Cidade das Flores',                emoji: '🛍️', color: '#f59e0b' },
+  { lat: -26.3043, lng: -48.8510, label: 'Católica SC',                               emoji: '🎓', color: '#3b82f6' },
+  { lat: -26.2349, lng: -48.8839, label: 'UFSC Joinville',                            emoji: '🎓', color: '#3b82f6' },
+  { lat: -26.2827, lng: -48.8130, label: 'Hospital Regional Hans Dieter',             emoji: '🏥', color: '#ec4899' },
+  { lat: -26.2254, lng: -48.8027, label: 'Aeroporto Joinville',                       emoji: '✈️', color: '#8b5cf6' },
+  { lat: -26.2697, lng: -48.8500, label: 'Igreja Luterana - São Mateus',              emoji: '⛪', color: '#8b5cf6' },
+  { lat: -26.2601, lng: -48.8500, label: 'Igreja Católica - Nossa Senhora Aparecida', emoji: '⛪', color: '#8b5cf6' },
 ];
 
 points.forEach(p => {
@@ -1065,21 +1101,18 @@ function enviarWhats() {
     return;
   }
 
-  // Salva o lead no Google Sheets em background (não bloqueia o redirecionamento)
-  if (SHEETS_URL !== 'COLE_A_URL_DO_APPS_SCRIPT_AQUI') {
-    fetch(SHEETS_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({
-        nome,
-        tel,
-        prazo: prazo || 'Não informado',
-        origem: 'site',
-        data: new Date().toLocaleString('pt-BR'),
-      }),
-    }).catch(() => {});
-  }
+  fetch(SHEETS_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({
+      nome,
+      tel,
+      prazo: prazo || 'Não informado',
+      origem: 'site',
+      data: new Date().toLocaleString('pt-BR'),
+    }),
+  }).catch(() => {});
 
   // Abre o WhatsApp imediatamente
   const msg = encodeURIComponent(
