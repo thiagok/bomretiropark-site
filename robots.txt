@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bomretiropark.com.br/sitemap.xml
