@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bom Retiro Park – Quitinetes em Joinville/SC</title>
+<meta name="description" content="Quitinetes mobiliadas em Joinville/SC. Conforto, segurança e localização privilegiada no Bom Retiro. Entre em contato e agende uma visita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-dark: #0d4a35;
+    --green-mid: #1a7a55;
+    --green-light: #e8f5ee;
+    --green-accent: #2ec47a;
+    --cream: #faf8f3;
+    --cream-dark: #f0ece2;
+    --text-dark: #1a1a18;
+    --text-mid: #4a4a44;
+    --text-light: #8a8a80;
+    --white: #ffffff;
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--green-dark);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(46,196,122,0.12) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(26,122,85,0.2) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--white);
+    line-height: 1.1;
+  }
+
+  .logo-tag {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .nav-badge {
+    background: rgba(46,196,122,0.2);
+    border: 1px solid rgba(46,196,122,0.4);
+    color: var(--green-accent);
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1.5rem 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--green-accent);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1.5px;
+    background: var(--green-accent);
+    display: block;
+  }
+
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 8vw, 48px);
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--green-accent);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+    max-width: 340px;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .hero-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .pill svg { width: 13px; height: 13px; fill: var(--green-accent); }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 360px;
+  }
+
+  .btn-primary {
+    background: var(--green-accent);
+    color: var(--green-dark);
+    border: none;
+    padding: 16px 24px;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .btn-primary:active { transform: scale(0.98); background: #25aa68; }
+
+  .btn-secondary {
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px 24px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .btn-secondary:active { background: rgba(255,255,255,0.08); }
+
+  /* ── SCROLL HINT ── */
+  .scroll-hint {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.3);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+  }
+
+  .scroll-hint::before {
+    content: '';
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+  }
+
+  /* ── FORM SECTION ── */
+  .form-section {
+    background: var(--white);
+    margin: 0;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-sub {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    font-weight: 300;
+  }
+
+  .form-grid { display: flex; flex-direction: column; gap: 14px; }
+
+  .field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-mid);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .field input,
+  .field select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #e8e8e0;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-dark);
+    background: var(--cream);
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .field input::placeholder { color: var(--text-light); }
+  .field input:focus, .field select:focus {
+    border-color: var(--green-mid);
+    background: var(--white);
+  }
+
+  .select-wrap { position: relative; }
+  .select-wrap::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--text-light);
+    pointer-events: none;
+  }
+
+  .btn-form {
+    width: 100%;
+    background: #25D366;
+    color: var(--white);
+    border: none;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-form:active { transform: scale(0.98); background: #20ba5a; }
+
+  .form-privacy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  /* ── FEATURES ── */
+  .features-section {
+    padding: 2.5rem 1.5rem;
+    background: var(--cream);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 1.5rem;
+  }
+
+  .feat-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.25rem 1rem;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .feat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--green-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .feat-icon svg { width: 20px; height: 20px; stroke: var(--green-mid); fill: none; stroke-width: 1.8; }
+
+  .feat-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .feat-desc {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  /* ── MAP SECTION ── */
+  .map-section {
+    padding: 2.5rem 1.5rem;
+    background: var(--white);
+  }
+
+  .map-container {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+    margin-top: 1.5rem;
+    position: relative;
+  }
+
+  #map {
+    width: 100%;
+    height: 380px;
+  }
+
+  .map-legend {
+    background: var(--white);
+    padding: 1rem 1.25rem;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .legend-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 10px;
+  }
+
+  .legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--text-mid);
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .nearby-list {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nearby-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .nearby-item:last-child { border-bottom: none; }
+
+  .nearby-emoji {
+    font-size: 18px;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 24px;
+    text-align: center;
+  }
+
+  .nearby-info { flex: 1; }
+
+  .nearby-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.3;
+  }
+
+  .nearby-cat {
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: 300;
+  }
+
+  .nearby-dist {
+    font-size: 12px;
+    color: var(--green-mid);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--green-dark);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-location {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-link {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+
+  .footer-link:active { color: var(--green-accent); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whats-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .whats-float:active { transform: scale(0.93); }
+  .whats-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* ── AUDIENCE ── */
+  .audience-section {
+    padding: 2.5rem 1.5rem;
+    background: var(--cream-dark);
+  }
+
+  .audience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1.5rem;
+  }
+
+  .audience-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-top: 3px solid var(--green-mid);
+  }
+
+  .audience-card.worker { border-top-color: #f59e0b; }
+
+  .audience-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .audience-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--green-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .audience-icon svg { width: 22px; height: 22px; stroke: var(--green-mid); fill: none; stroke-width: 1.8; }
+  .audience-icon.worker-icon { background: #fef3c7; }
+  .audience-icon.worker-icon svg { stroke: #d97706; }
+
+  .audience-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--text-dark);
+    line-height: 1.2;
+  }
+
+  .audience-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .audience-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  .audience-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green-accent);
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  .audience-card.worker .audience-list li::before { background: #f59e0b; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero-title { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-pills { animation: fadeUp 0.6s 0.3s ease both; }
+  .hero-cta { animation: fadeUp 0.6s 0.4s ease both; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <nav class="nav">
+    <div class="logo">
+      <span class="logo-name">Bom Retiro Park</span>
+      <span class="logo-tag">Joinville · SC</span>
+    </div>
+    <span class="nav-badge">Disponível</span>
+  </nav>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Quitinetes mobiliadas</span>
+    <h1 class="hero-title">Seu lar em <em>Joinville</em>, sem complicação.</h1>
+    <p class="hero-sub">Ideal para estudantes e profissionais que precisam de um lugar pronto, seguro e bem localizado em Joinville — sem burocracia, sem dor de cabeça.</p>
+    <div class="hero-pills">
+      <div class="pill">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Totalmente mobiliada
+      </div>
+      <div class="pill">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Condomínio seguro
+      </div>
+      <div class="pill">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Localização privilegiada
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#form" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Quero ser avisado quando abrir
+      </a>
+      <a href="#mapa" class="btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Ver localização e arredores
+      </a>
+    </div>
+  </div>
+  <div class="scroll-hint">Role para saber mais</div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="form">
+  <div class="section-label">Cadastre seu interesse</div>
+  <h2 class="section-title">Seja o primeiro a saber</h2>
+  <p class="section-sub">Deixe seus dados e entraremos em contato pelo WhatsApp assim que houver disponibilidade.</p>
+  <div class="form-grid">
+    <div class="field">
+      <label for="nome">Seu nome</label>
+      <input type="text" id="nome" placeholder="Como podemos te chamar?" autocomplete="name" />
+    </div>
+    <div class="field">
+      <label for="tel">WhatsApp</label>
+      <input type="tel" id="tel" placeholder="(47) 99999-9999" autocomplete="tel" inputmode="numeric" />
+    </div>
+    <div class="field">
+      <label for="prazo">Quando pretende alugar?</label>
+      <div class="select-wrap">
+        <select id="prazo">
+          <option value="">Selecione...</option>
+          <option>O mais rápido possível</option>
+          <option>Em até 1 mês</option>
+          <option>Em até 3 meses</option>
+          <option>Ainda estou pesquisando</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn-form" onclick="enviarWhats()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Entrar em contato pelo WhatsApp
+    </button>
+    <p class="form-privacy">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      Seus dados não serão compartilhados
+    </p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="section-label">Diferenciais</div>
+  <h2 class="section-title">Por que o Bom Retiro Park?</h2>
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <div class="feat-title">Totalmente mobiliada</div>
+      <div class="feat-desc">Chegue e já se sinta em casa, sem preocupações</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="feat-title">Segurança 24h</div>
+      <div class="feat-desc">Condomínio fechado com controle de acesso</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="feat-title">Localização privilegiada</div>
+      <div class="feat-desc">Tudo que precisa a poucos minutos</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <div class="feat-title">Aluguel simples</div>
+      <div class="feat-desc">Processo descomplicado e sem burocracia</div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience-section">
+  <div class="section-label">Para quem é</div>
+  <h2 class="section-title">Feito para quem vive Joinville</h2>
+  <div class="audience-grid">
+
+    <div class="audience-card">
+      <div class="audience-card-header">
+        <div class="audience-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3.33 1.67 8.67 1.67 12 0v-5"/></svg>
+        </div>
+        <div class="audience-title">Você é estudante</div>
+      </div>
+      <ul class="audience-list">
+        <li>Próximo à Udesc e Univille (Menos de 1km), Católica SC (~5,5 km) e UFSC Joinville</li>
+        <li>Mobiliado — sem gasto com móveis nem caminhão de mudança</li>
+        <li>Processo simples, sem fiador nem burocracia</li>
+        <li>Condomínio fechado para quem mora sozinho pela primeira vez</li>
+      </ul>
+    </div>
+
+    <div class="audience-card worker">
+      <div class="audience-card-header">
+        <div class="audience-icon worker-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/></svg>
+        </div>
+        <div class="audience-title">Você trabalha na região</div>
+      </div>
+      <ul class="audience-list">
+        <li>Localização privilegiada com acesso à Zona Industrial Norte</li>
+        <li>A poucos km Embraco, Tupy, Whirlpool e Tigre</li>
+        <li>Chegue do trabalho e já esteja em casa — sem trânsito longo</li>
+        <li>Aluguel mensal sem fiador, contrato flexível</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section" id="mapa">
+  <div class="section-label">Localização</div>
+  <h2 class="section-title">Tudo perto de você</h2>
+  <p class="section-sub" style="font-size:14px;color:var(--text-mid);line-height:1.6;margin-top:0.5rem;font-weight:300;">Rua Pio XII, 87 – Bom Retiro, Joinville/SC</p>
+  <div class="map-container">
+    <div id="map"></div>
+    <div class="map-legend">
+      <div class="legend-title">Legenda</div>
+      <div class="legend-items">
+        <div class="legend-item">🏠 Bom Retiro Park</div>
+        <div class="legend-item">🎓 Universidades</div>
+        <div class="legend-item">🛍️ Shoppings</div>
+        <div class="legend-item">🛒 Mercados</div>
+        <div class="legend-item">💊 Farmácias</div>
+        <div class="legend-item">🏥 Hospital</div>
+        <div class="legend-item">✈️ Aeroporto</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nearby-list">
+    <div style="font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);padding:16px 0 8px;">Pontos de interesse próximos</div>
+
+    <div class="nearby-item">
+      <span class="nearby-emoji">🛒</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Supermercado Albino</div>
+        <div class="nearby-cat">Mercado · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~100m</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">💊</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Farmácia Preço Popular</div>
+        <div class="nearby-cat">Farmácia · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~300m</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🛍️</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Shopping Garten</div>
+        <div class="nearby-cat">Shopping · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~500m</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🎓</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Univille</div>
+        <div class="nearby-cat">Universidade · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">&lt;1km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🎓</span>
+      <div class="nearby-info">
+        <div class="nearby-name">UDESC Joinville</div>
+        <div class="nearby-cat">Universidade · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">&lt;1km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">💊</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Drogaria Coradelli</div>
+        <div class="nearby-cat">Farmácia · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~1,1km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🛒</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Supermercados Kunz</div>
+        <div class="nearby-cat">Mercado · Bom Retiro</div>
+      </div>
+      <div class="nearby-dist">~1,2km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🛍️</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Shopping Mueller</div>
+        <div class="nearby-cat">Shopping · Centro</div>
+      </div>
+      <div class="nearby-dist">~5,3km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🛍️</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Shopping Cidade das Flores</div>
+        <div class="nearby-cat">Shopping · Centro</div>
+      </div>
+      <div class="nearby-dist">~5,5km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🎓</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Católica de Santa Catarina</div>
+        <div class="nearby-cat">Universidade · Centro</div>
+      </div>
+      <div class="nearby-dist">~5,5km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🏥</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Hospital Regional Hans Dieter</div>
+        <div class="nearby-cat">Hospital · Boa Vista</div>
+      </div>
+      <div class="nearby-dist">~6,2km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">🎓</span>
+      <div class="nearby-info">
+        <div class="nearby-name">UFSC Joinville</div>
+        <div class="nearby-cat">Universidade · Z. Industrial Norte</div>
+      </div>
+      <div class="nearby-dist">~8,9km</div>
+    </div>
+    <div class="nearby-item">
+      <span class="nearby-emoji">✈️</span>
+      <div class="nearby-info">
+        <div class="nearby-name">Aeroporto Lauro Carneiro de Loyola</div>
+        <div class="nearby-cat">Aeroporto · Aventureiro</div>
+      </div>
+      <div class="nearby-dist">~12km</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">Bom Retiro Park</div>
+  <div class="footer-location">Rua Pio XII, 87 · Bom Retiro · Joinville/SC</div>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/bomretiropark" class="footer-link" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      @bomretiropark
+    </a>
+    <a href="#" data-whats class="footer-link" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+  <div class="footer-copy">© 2025 Bom Retiro Park · Joinville/SC</div>
+</footer>
+
+<!-- FLOAT WHATSAPP -->
+<a href="#" data-whats class="whats-float" target="_blank" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- LEAFLET MAP -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const WHATSAPP  = '5547999615973';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbx2HvdpNnbR6FrQ3BX-4AkH2aBNdAz-MxwWLU7CZ8ZTTmJeV01ZxC1SKQ8JDLxLBmvXrQ/exec';
+
+// Injeta o número nos links de WhatsApp do rodapé e botão flutuante
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-whats]').forEach(el => {
+    el.href = `https://wa.me/${WHATSAPP}`;
+  });
+});
+// ─────────────────────────────────────────────────────────────────────────────
+
+const map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView([-26.2540, -48.8479], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap'
+}).addTo(map);
+
+function makeEmojiIcon(emoji) {
+  return L.divIcon({
+    className: '',
+    html: `<span style="font-size:22px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.35))">${emoji}</span>`,
+    iconSize: [28, 28],
+    iconAnchor: [14, 14]
+  });
+}
+
+L.marker([-26.2540, -48.8479], {icon: makeEmojiIcon('🏠')})
+  .addTo(map).bindPopup('<b>Bom Retiro Park</b><br>R. Pio XII, 87');
+
+const points = [
+  { lat: -26.2546, lng: -48.8500, label: 'Supermercado Albino',          emoji: '🛒' },
+  { lat: -26.2552, lng: -48.8495, label: 'Farmácia Preço Popular',       emoji: '💊' },
+  { lat: -26.2655, lng: -48.8446, label: 'Drogaria Coradelli',           emoji: '💊' },
+  { lat: -26.2641, lng: -48.8452, label: 'Supermercados Kunz',           emoji: '🛒' },
+  { lat: -26.2517, lng: -48.8527, label: 'Univille',                     emoji: '🎓' },
+  { lat: -26.2529, lng: -48.8547, label: 'UDESC Joinville',              emoji: '🎓' },
+  { lat: -26.3036, lng: -48.8486, label: 'Shopping Mueller',             emoji: '🛍️' },
+  { lat: -26.2539, lng: -48.8532, label: 'Shopping Garten',              emoji: '🛍️' },
+  { lat: -26.2990, lng: -48.8485, label: 'Shopping Cidade das Flores',   emoji: '🛍️' },
+  { lat: -26.3043, lng: -48.8510, label: 'Católica SC',                  emoji: '🎓' },
+  { lat: -26.2349, lng: -48.8839, label: 'UFSC Joinville',               emoji: '🎓' },
+  { lat: -26.2827, lng: -48.8130, label: 'Hospital Regional Hans Dieter',emoji: '🏥' },
+  { lat: -26.2254, lng: -48.8027, label: 'Aeroporto Joinville',          emoji: '✈️' },
+];
+
+points.forEach(p => {
+  L.marker([p.lat, p.lng], {icon: makeEmojiIcon(p.emoji)})
+    .addTo(map).bindPopup(`<b>${p.label}</b>`);
+});
+
+function enviarWhats() {
+  const nome  = document.getElementById('nome').value.trim();
+  const tel   = document.getElementById('tel').value.trim();
+  const prazo = document.getElementById('prazo').value;
+
+  if (!nome || !tel) {
+    alert('Por favor, preencha seu nome e WhatsApp.');
+    return;
+  }
+
+  // Salva o lead no Google Sheets em background (não bloqueia o redirecionamento)
+  if (SHEETS_URL !== 'COLE_A_URL_DO_APPS_SCRIPT_AQUI') {
+    fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({
+        nome,
+        tel,
+        prazo: prazo || 'Não informado',
+        origem: 'site',
+        data: new Date().toLocaleString('pt-BR'),
+      }),
+    }).catch(() => {});
+  }
+
+  // Abre o WhatsApp imediatamente
+  const msg = encodeURIComponent(
+    `Olá! Tenho interesse nas quitinetes do Bom Retiro Park.\n\nNome: ${nome}\nWhatsApp: ${tel}\nPrazo: ${prazo || 'Não informado'}`
+  );
+  window.open(`https://wa.me/${WHATSAPP}?text=${msg}`, '_blank');
+}
+</script>
+</body>
+</html>
